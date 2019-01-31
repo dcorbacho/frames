@@ -1,4 +1,3 @@
-#!/usr/bin/python
 import os
 import sys
 
@@ -10,8 +9,8 @@ first = numbers[0]
 last = numbers[len(numbers)- 1]
 
 if len(numbers) > 0:
-    print "First index: " + first
-    print "Last index: " + last
+    print ("First index: " + first)
+    print ("Last index: " + last)
 
 strlen = len(first)
 
