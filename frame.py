@@ -24,16 +24,16 @@ else:
 
         strlen = len(first)
 
-        index = int(first)
+        index = int(first) + 1
         missing = []
 
         for n in numbers:
             if int(n) == index + 1:
                 missing.append(str(index).zfill(strlen))
-        else:
-            if int(n) > index:
-                missing.append('{min}-{max}'.format(min = str(index).zfill(strlen), max = str(int(n) - 1).zfill(strlen)))
-                index = int(n) + 1
+            else:
+                if int(n) > index:
+                    missing.append('{min}-{max}'.format(min = str(index).zfill(strlen), max = str(int(n) - 1).zfill(strlen)))
+            index = int(n) + 1
 
-                print('Missing:')
-                print(','.join(missing))
+        print('Missing:')
+        print(','.join(missing))
